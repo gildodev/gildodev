@@ -3,20 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gildo 4Services - Portfólio Profissional</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-darks bg-transparent fixed-top d-none">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.svg" alt="Gildo 4Services Logo" class="logo">
-                Gildo 4Services
+                <span class="logo-code">&lt;/&gt;</span> Gildo 4Services
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -25,29 +25,28 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experiência</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Home Section with 3D Background -->
-    <section id="home" class="home-section d-flex align-items-center">
+    <section id="home" class="home-section w-100 d-flex align-items-center">
         <div id="home-3d-background" class="home-3d-background"></div>
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-md-6 z-3 position-relative">
-                    <div class="profile-image-container">
-                        <img src="profile.jpg" alt="Gildo Developer" class="profile-image">
+                    <div class="profile-image-container animate__animated animate__fadeIn">
+                        <img src="img/perfil.jpg" alt="Gildo Developer" class="profile-image">
                     </div>
-                    <h1 class="display-4 text-yellow">Gildo Machel</h1>
+                    <h1 class="display-4 text-yellow animate__animated animate__bounceIn">Gildo Nhamirre</h1>
                     <div id="typed-output" class="typed-text"></div>
                     <div class="professional-badges">
-                        <span class="badge bg-yellow">+10 Anos Experiência</span>
-                        <span class="badge bg-yellow">Desenvolvedor Sênior</span>
+                        <span class="badge bg-yellow">+258 873686545</span>
+                        <span class="badge bg-yellow">gildoeugenio5@gmail.com</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -57,127 +56,217 @@
         </div>
     </section>
 
-    <!-- Enhanced About Section with Creative Design -->
-    <section id="about" class="about-section bg-dark text-light py-5">
+    <!-- About Section - Enhanced -->
+    <section id="about" class="about-section py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="professional-journey-visualization">
-                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" class="journey-svg">
-                            <path d="M50,50 Q300,200 550,50" fill="none" stroke="#FFD700" stroke-width="3" />
-                            <circle cx="50" cy="50" r="20" fill="#FFD700" />
-                            <circle cx="300" cy="200" r="30" fill="#FFD700" />
-                            <circle cx="550" cy="50" r="20" fill="#FFD700" />
-                            <text x="50" y="30" fill="#FFD700" font-size="14">Início</text>
-                            <text x="300" y="230" fill="#FFD700" font-size="14">Evolução</text>
-                            <text x="550" y="30" fill="#FFD700" font-size="14">Inovação</text>
-                        </svg>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="section-title animate__animated animate__fadeIn">Minha Jornada Profissional</h2>
-                    <div class="professional-story">
-                        <p class="lead text-yellow">Desenvolvedor que transforma linhas de código em soluções revolucionárias</p>
-                        <div class="professional-highlights">
-                            <div class="highlight-card">
-                                <h4>🚀 Especialista Multidisciplinar</h4>
-                                <p>Expertise em desenvolvimento de software, sistemas de segurança e soluções tecnológicas integrais.</p>
-                            </div>
-                            <div class="highlight-card">
-                                <h4>💡 Inovação Constante</h4>
-                                <p>Transformando ideias complexas em aplicações intuitivas e de alto desempenho.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Experience Section -->
-    <section id="experience" class="experience-section bg-dark py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Trajetória Profissional</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <h3>Harsenm, Lda</h3>
-                        <span class="text-yellow">10/2024 - 01/2025 | Desenvolvedor Mobile</span>
-                        <p>Criação de APPs revolucionários com Flutter, integrando tecnologias de ponta para experiências únicas.</p>
-                        <div class="tech-badges">
-                            <span class="badge">Flutter</span>
-                            <span class="badge">Dart</span>
-                            <span class="badge">Mobile Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <h3>Educ Investimento, Lda</h3>
-                        <span class="text-yellow">04/2024 - 09/2024 | Arquiteto de Sistemas</span>
-                        <p>Desenvolvimento de módulos empresariais que elevam a eficiência organizacional a novos patamares.</p>
-                        <div class="tech-badges">
-                            <span class="badge">Backend</span>
-                            <span class="badge">Integração de Sistemas</span>
-                            <span class="badge">API Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <h3>Wisedacadmy, Lda</h3>
-                        <span class="text-yellow">04/2024 - 09/2024 | Full Stack Developer</span>
-                        <p>Arquitetura de plataforma educacional online, combinando tecnologia de ponta com experiência do usuário.</p>
-                        <div class="tech-badges">
-                            <span class="badge">Full Stack</span>
-                            <span class="badge">E-learning</span>
-                            <span class="badge">Payment Integration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Linguagens de Programação</h2>
+            <h2 class="section-title animate__animated animate__fadeIn">Minha Jornada Tecnológica</h2>
             <div class="row">
-                <div class="col-md-3 skill-card" data-lang="php">PHP</div>
-                <div class="col-md-3 skill-card" data-lang="java">Java</div>
-                <div class="col-md-3 skill-card" data-lang="python">Python</div>
-                <div class="col-md-3 skill-card" data-lang="dart">Dart</div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-light mb-4 animate__animated animate__lightSpeedInLeft">
+                        <div class="card-body">
+                            <h3 class="text-yellow"><i class="fas fa-rocket me-2"></i>Visão Holística da Tecnologia</h3>
+                            <p>Mais do que um desenvolvedor, sou um arquiteto de soluções digitais. Minha expertise transcende códigos - transformo desafios complexos em inovações tecnológicas que impulsionam negócios.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-light animate__animated animate__lightSpeedInRight">
+                        <div class="card-body">
+                            <h3 class="text-yellow"><i class="fas fa-brain me-2"></i>Interdisciplinaridade</h3>
+                            <p>Combino desenvolvimento de software com conhecimentos em sistemas de segurança, criando soluções que integram múltiplas camadas tecnológicas com precisão e criatividade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate__animated animate__bounceInDown">
+                    <div class="professional-timeline">
+                        <div class="timeline-item animate__animated animate__lightSpeedInLeft">
+                            <div class="timeline-icon bg-yellow text-dark">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4 class="text-yellow">Desenvolvimento Multiplataforma</h4>
+                                <p>Especialista em criar ecossistemas digitais que funcionam perfeitamente entre dispositivos móveis, web e sistemas corporativos.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate__animated animate__lightSpeedInRight">
+                            <div class="timeline-icon bg-yellow text-dark">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4 class="text-yellow">Arquitetura de Soluções</h4>
+                                <p>Projetos que vão além do código: construo arquiteturas de software escaláveis, seguras e altamente performáticas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="code-showcase" class="code-showcase"></div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <!-- Skills Section - Enhanced -->
+    <section id="skills" class="skills-section py-5">
         <div class="container">
-            <h2 class="section-title">Projetos</h2>
-            <div class="row">
-                <div class="col-md-4 project-card">
-                    <h3>APKs - Harsenm</h3>
-                    <p>Desenvolvimento de aplicações móveis com Flutter e Dart</p>
+            <h2 class="section-title">Arsenal Tecnológico</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="text-yellow">Linguagens de Programação</h3>
+                    <div class="skill-icons">
+                        <div class="skill-icon skill-card" data-lang="php">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                            
+                        </div>
+                        <div class="skill-icon skill-card" data-lang="java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-icon skill-card" data-lang="python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-icon skill-card" data-lang="dart">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Dart</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 project-card">
-                    <h3>Plataforma Online - Wisedacademy</h3>
-                    <p>Criação de plataforma de cursos online</p>
+                <div class="skill-category">
+                    <h3 class="text-yellow">Frameworks & Tecnologias</h3>
+                    <div class="skill-chips">
+                        <span class="skill-chip">React.js</span>
+                        <span class="skill-chip">Laravel</span>
+                        <span class="skill-chip">Django</span>
+                        <span class="skill-chip">Flutter</span>
+                        <span class="skill-chip">Spring Boot</span>
+                    </div>
                 </div>
-                <div class="col-md-4 project-card">
-                    <h3>Sistemas Empresariais - Educ Investimento</h3>
-                    <p>Desenvolvimento de módulos e sistemas corporativos</p>
+            </div>
+
+            <div class="code-showcase mt-4 skill-category">
+                <pre><code id="code-showcase" class="w-100"></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Enhanced -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container">
+            <h2 class="section-title">Portfólio de Soluções</h2>
+            <div class="project-carousel row">
+                <div class="col-md-6">
+                    <div class="project-card advanced-project-card">
+                        <div class="project-header">
+                            <img src="harsenm-logo.png" alt="Harsenm Project" class="project-logo d-none">
+                            <h3>JOINT - Desenvolvimento de Website </h3>
+                        </div>
+                        <div class="project-details">
+                            <p>Desenvolvimento de website da JOINT - Liga de ONGs em Moçambique.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Node</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://joint.org.mz" class="btn btn-outline-yellow">Ver Detalhes</a>
+                                <a href="#" class="btn btn-yellow d-none">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card advanced-project-card">
+                        <div class="project-header">
+                            <img src="harsenm-logo.png" alt="Harsenm Project" class="project-logo d-none">
+                            <h3>Harsenm, Lda- APKs Inovadoras</h3>
+                        </div>
+                        <div class="project-details">
+                            <p>Desenvolvimento de aplicações móveis multiplataforma com Flutter e Dart, focando em performance e experiência do usuário em compra de bilhetes inter-provinciais em moçambique.</p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-outline-yellow">Ver Detalhes</a>
+                                <a href="#" class="btn btn-yellow">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-card advanced-project-card">
+                        <div class="project-header">
+                            <img src="wisedacademy-logo.png" alt="Wisedacademy Project" class="project-logo d-none">
+                            <h3>JNN Business - Plataforma E-commerce</h3>
+                        </div>
+                        <div class="project-details">
+                            <p>Criação de plataforma e-commerce, para venda de produtos de roupas com integração de api de Whatsapp.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Full Stack</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-outline-yellow">Ver Detalhes</a>
+                                <a href="#" class="btn btn-yellow">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-card advanced-project-card">
+                        <div class="project-header">
+                            <img src="wisedacademy-logo.png" alt="Wisedacademy Project" class="project-logo d-none">
+                            <h3>Wisedacademy - Plataforma E-learning</h3>
+                        </div>
+                        <div class="project-details">
+                            <p>Plataforma completa de cursos online com sistemas de pagamento integrados, dashboard interativo e experiência de usuário premium.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Full Stack</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-outline-yellow">Ver Detalhes</a>
+                                <a href="#" class="btn btn-yellow">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-card advanced-project-card">
+                        <div class="project-header">
+                            <img src="educ-investimento-logo.png" alt="Educ Investimento Project" class="project-logo d-none">
+                            <h3>Electro Computer Services, Lda - Sistemas de venda</h3>
+                        </div>
+                        <div class="project-details">
+                            <p>Desenvolvimento de módulos corporativos customizados, integrando sistemas legados e implementando soluções de automação empresarial.</p>
+                            <div class="project-tags">
+                                <span class="tag">Desktop</span>
+                                <span class="tag">Java</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-outline-yellow">Ver Detalhes</a>
+                                <a href="#" class="btn btn-yellow">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contato</h2>
+            <h2 class="section-title">Contacto</h2>
             <form id="contact-form">
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Nome" required>
@@ -193,14 +282,14 @@
         </div>
     </section>
 
-    <!-- Chatbot Section -->
-    <div id="chatbot" class="chatbot-container">
-        <div class="chatbot-header">Assistente Virtual</div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <input type="text" id="chatbot-input" placeholder="Digite sua mensagem">
-        <button id="chatbot-send">Enviar</button>
+    <div class="chatbot-footer">
+        <div class="chatbot-branding">
+            Powered by Gildo 4Services
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -13,6 +13,43 @@ body {
     perspective: 1000px;
 }
 
+
+/* Scroll Personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(44,95,45,0.1);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--primary-black), #333);
+    border-radius: 5px;
+    cursor: pointer;
+  
+  &:hover {
+    background: #1e401f;
+    cursor: pointer;
+  }
+}
+
+/* Cursor Personalizado */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2c5f2d 20%, transparent 100%);
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
 /* Navbar Styles */
 .navbar {
     background-color: rgba(18, 18, 18, 0.9);
@@ -23,14 +60,25 @@ body {
     color: var(--accent-yellow) !important;
 }
 
+/* Navbar Branding */
+.logo-code {
+    color: var(--accent-yellow);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    background: linear-gradient(45deg, var(--accent-yellow), #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* 3D Home Background Styles */
 .home-3d-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1;
+    /* height: 10%; */
+    z-index: 0;
     transform: translateZ(-100px);
 }
 
@@ -60,7 +108,7 @@ body {
 .profile-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .professional-badges {
@@ -110,11 +158,12 @@ body {
     background-color: rgba(255, 215, 0, 0.1);
     border: 2px solid var(--accent-yellow);
     color: var(--accent-yellow);
-    padding: 20px;
-    margin: 10px;
+    padding: 10px 20px;
+    /* margin: 10px; */
     text-align: center;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.3s ease;
+    border-radius: 2rem;
 }
 
 .skill-card:hover {
@@ -156,117 +205,265 @@ body {
     color: var(--primary-black);
 }
 
-/* Chatbot Styles */
+/* Enhanced Chatbot Styles */
 .chatbot-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 300px;
-    background-color: rgba(18, 18, 18, 0.9);
-    border: 1px solid var(--accent-yellow);
-    border-radius: 10px;
-    z-index: 1000;
+    width: 350px;
+    background-color: rgba(18, 18, 18, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .chatbot-header {
-    background-color: var(--accent-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--yellow-gradient);
     color: var(--primary-black);
-    padding: 10px;
-    text-align: center;
+    padding: 15px;
+}
+
+.chatbot-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-title i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.chatbot-subtitle {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.chatbot-status {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2ecc71;
+    margin-right: 5px;
 }
 
 .chatbot-messages {
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatbot-input-container {
+    display: flex;
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #chatbot-input {
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    flex-grow: 1;
+    background: transparent;
     border: none;
     color: var(--text-color);
+    padding: 10px;
 }
 
 #chatbot-send {
-    width: 100%;
-    background-color: var(--accent-yellow);
-    color: var(--primary-black);
+    background: var(--yellow-gradient);
     border: none;
-    padding: 10px;
+    color: var(--primary-black);
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
 }
 
-.professional-journey-visualization {
-    width: 100%;
-    height: 300px;
+#chatbot-send:hover {
+    transform: scale(1.1);
 }
 
-.journey-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.professional-highlights {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.highlight-card {
+.chatbot-footer {
     background-color: rgba(255, 215, 0, 0.1);
-    border: 1px solid var(--accent-yellow);
-    padding: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--accent-yellow);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    max-width: 80%;
 }
 
-.highlight-card:hover {
-    transform: scale(1.05);
+.message.user {
+    background-color: rgba(255, 215, 0, 0.2);
+    align-self: flex-end;
+    color: var(--accent-yellow);
 }
 
-.timeline {
-    position: relative;
-    padding: 20px 0;
+.message.bot {
+    background-color: rgba(255, 255, 255, 0.1);
+    align-self: flex-start;
+    color: var(--text-color);
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background: var(--accent-yellow);
-    left: 50%;
-    transform: translateX(-50%);
+/* Professional Timeline Styles */
+.professional-timeline {
+  position: relative;
+  padding: 20px 0;
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 30px;
-    width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.timeline-item:nth-child(even) {
-    margin-left: 50%;
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.2);
 }
 
 .timeline-content {
-    background-color: rgba(255, 215, 0, 0.1);
-    border: 1px solid var(--accent-yellow);
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
-.tech-badges {
+/* Skills Grid Styles */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.skill-icons {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 1rem;
 }
 
-.tech-badges .badge {
-    background-color: rgba(255, 215, 0, 0.2);
+.skill-icon {
+    cursor: pointer;
+    text-align: center;
     color: var(--accent-yellow);
-    padding: 5px 10px;
-    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon i {
+  font-size: 3rem;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill-chip {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--accent-yellow);
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-yellow);
+}
+
+/* Project Carousel Styles */
+
+.advanced-project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.advanced-project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.project-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.project-details{
+    text-align: start;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.tag {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--accent-yellow);
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-actions a:hover {
+    color: white;
+  }
+
+.btn-yellow {
+  background-color: var(--accent-yellow);
+  color: var(--primary-black);
+}
+
+.btn-outline-yellow {
+  border: 1px solid var(--accent-yellow);
+  color: var(--accent-yellow);
 }
