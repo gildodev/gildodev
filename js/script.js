@@ -47,10 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Typed.js for home section
   new Typed('#typed-output', {
     strings: [
-      'Desenvolvedor de Software', 
-      'Sou um desenvolvedor de software altamente capacitado com vasta experiência em múltiplas linguagens de programação, frameworks e tecnologias, com ênfase no desenvolvimento de soluções inovadoras e eficientes para empresas de diferentes sectores.',
-      "Ao longo da minha carreira, tive a oportunidade de trabalhar em diversos projetos, desde aplicações web e móveis até sistemas corporativos complexos, com forte foco em automação e inteligência artificial (IA).",
-      "Além do meu trabalho como desenvolvedor, também possuo experiência em áreas complementares como instalação e manutenção de sistemas de segurança (CCTV, alarmes) e monitoramento remoto, o que me permite ter uma visão holística de sistemas tecnológicos que vão além do software.",
+      '<Carreira>Desenvolvedor de Software</Carreira>', 
+      'Sou um desenvolvedor de software altamente capacitado com vasta experiência em múltiplas',
+      'linguagens de programação, frameworks e tecnologias, com ênfase no desenvolvimento de soluções inovadoras e', 
+      'eficientes para empresas de diferentes sectores.',
+      "Ao longo da minha carreira, tive a oportunidade de trabalhar em diversos projetos,",
+      "desde aplicações web e móveis até sistemas corporativos complexos, com forte foco em automação e inteligência artificial (IA).",
+      "Além do meu trabalho como desenvolvedor, também possuo experiência em áreas complementares como instalação e",
+      " manutenção de sistemas de segurança (CCTV, alarmes) e monitoramento remoto, o que me permite ter uma visão holística de sistemas tecnológicos que vão além do software.",
     
     ],
     typeSpeed: 50,
