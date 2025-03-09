@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     ],
     typeSpeed: 50,
-    backSpeed: 30,
+    backSpeed: 2,
     loop: true
   });
 
